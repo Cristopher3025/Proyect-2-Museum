@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="app.museo.MenuController">
+
+    <top>
+        <Label text="Museo Americano de Historia Natural"
+               style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-padding: 20px;"
+               BorderPane.alignment="CENTER"/>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="25">
+            <Label text="Panel Administrativo"
+                   style="-fx-font-size: 20px; -fx-text-fill: #34495e; -fx-font-weight: bold;" />
+
+            <GridPane hgap="20" vgap="15" alignment="CENTER">
+                <Button text="Museos" onAction="#goToMuseos" prefWidth="180" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <Button text="Salas" onAction="#goToSalas" prefWidth="180" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                <Button text="Colecciones" onAction="#goToColecciones" prefWidth="180" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <Button text="Especies" onAction="#goToEspecies" prefWidth="180" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                <Button text="Temáticas" onAction="#goToTematicas" prefWidth="180" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <Button text="Precios" onAction="#goToPrecios" prefWidth="180" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+                <Button text="Comisiones" onAction="#goToComisiones" prefWidth="180" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <Button text="Entradas" onAction="#goToEntradas" prefWidth="180" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+                <Button text="Valoraciones" onAction="#goToValoraciones" prefWidth="180" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                <Button text="Reportes" onAction="#goToReportes" prefWidth="180" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+            </GridPane>
+
+            <Button text="Salir" onAction="#salir" prefWidth="180"
+                    style="-fx-background-color: #c0392b; -fx-text-fill: white; -fx-font-weight: bold;"/>
+        </VBox>
+    </center>
+
+    <bottom>
+        <Label text="Explora la historia, la ciencia y la biodiversidad"
+               style="-fx-font-size: 14px; -fx-padding: 15px; -fx-text-fill: #7f8c8d;"
+               BorderPane.alignment="CENTER"/>
+    </bottom>
+
+</BorderPane>
+

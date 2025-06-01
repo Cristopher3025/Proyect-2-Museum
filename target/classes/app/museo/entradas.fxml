@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="app.museo.EntradasController">
+
+    <top>
+        <Label text="Venta de Entradas"
+               style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-padding: 20;"
+               BorderPane.alignment="CENTER"/>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="15" padding="20">
+            <GridPane hgap="15" vgap="10">
+                <Label text="Fecha de visita:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <DatePicker fx:id="dateVisita" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Salas disponibles:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <ListView fx:id="listSalas" GridPane.rowIndex="1" GridPane.columnIndex="1" prefHeight="160" />
+            </GridPane>
+
+            <HBox spacing="10" alignment="CENTER">
+                <Label text="Precio total:"/>
+                <Label fx:id="labelTotal" text="₡0.00" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Button text="Calcular Total" onAction="#calcularTotal"/>
+                <Button text="Guardar Entrada" onAction="#guardarEntrada"/>
+                <Button text="Volver al Menú" onAction="#volverMenu"/>
+            </HBox>
+        </VBox>
+    </center>
+
+    <bottom>
+        <Label text="Seleccione salas y fecha para generar su entrada"
+               style="-fx-font-style: italic; -fx-padding: 10px;"
+               BorderPane.alignment="CENTER"/>
+    </bottom>
+
+</BorderPane>
+
+

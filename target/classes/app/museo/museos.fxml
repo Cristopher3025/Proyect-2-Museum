@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="app.museo.MuseosController"
+      alignment="CENTER"
+      spacing="10"
+      style="-fx-padding: 20;">
+
+    <Label text="Mantenimiento de Museos" style="-fx-font-size: 18;" />
+
+    <HBox spacing="10">
+        <Label text="Nombre:" />
+        <TextField fx:id="txtNombre" />
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Dirección:" />
+        <TextField fx:id="txtDireccion" />
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Teléfono:" />
+        <TextField fx:id="txtTelefono" />
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Tipo de Museo:" />
+        <ComboBox fx:id="comboTipoMuseo" prefWidth="200"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Button text="Agregar" onAction="#agregarMuseo"/>
+        <Button text="Eliminar" onAction="#eliminarMuseo"/>
+        <Button text="Volver" onAction="#volverMenu"/>
+    </HBox>
+
+    <TableView fx:id="tablaMuseos" prefWidth="450" prefHeight="200">
+        <columns>
+            <TableColumn fx:id="colNombre" text="Nombre"/>
+            <TableColumn fx:id="colDireccion" text="Dirección"/>
+            <TableColumn fx:id="colTelefono" text="Teléfono"/>
+            <TableColumn fx:id="colTipo" text="Tipo"/>
+        </columns>
+    </TableView>
+</VBox>
+

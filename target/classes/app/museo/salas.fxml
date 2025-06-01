@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="app.museo.SalasController"
+      spacing="10"
+      alignment="CENTER"
+      style="-fx-padding: 20;">
+
+    <Label text="Mantenimiento de Salas" style="-fx-font-size: 18;" />
+    
+    <HBox spacing="10">
+        <Label text="Nombre:" />
+        <TextField fx:id="txtNombre" />
+    </HBox>
+    
+    <HBox spacing="10">
+        <Label text="Descripción:" />
+        <TextField fx:id="txtDescripcion" />
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Museo:" />
+        <ComboBox fx:id="comboMuseos" prefWidth="200"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Button text="Agregar" onAction="#agregarSala"/>
+        <Button text="Eliminar" onAction="#eliminarSala"/>
+        <Button text="Volver" onAction="#volverMenu"/>
+    </HBox>
+
+    <TableView fx:id="tablaSalas" prefHeight="200" prefWidth="400">
+        <columns>
+            <TableColumn text="Nombre" fx:id="colNombre"/>
+            <TableColumn text="Descripción" fx:id="colDescripcion"/>
+            <TableColumn text="Museo" fx:id="colMuseo"/>
+        </columns>
+    </TableView>
+</VBox>
+
