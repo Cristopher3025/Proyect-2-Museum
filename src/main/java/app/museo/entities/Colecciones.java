@@ -134,7 +134,8 @@ public class Colecciones implements Serializable {
 
     @Override
     public String toString() {
-        return "app.museo.entities.Colecciones[ idcoleccion=" + idcoleccion + " ]";
+        return nombre;
     }
+
     
 }

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="app.museo.TematicasController">
+    <children>
+        <VBox spacing="10" AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+            <HBox spacing="10">
+                <Label text="Nombre:"/>
+                <TextField fx:id="txtNombre"/>
+                <Label text="Características:"/>
+                <TextField fx:id="txtCaracteristicas"/>
+                <Label text="Época:"/>
+                <ComboBox fx:id="comboEpoca"/>
+                <Button text="Agregar" onAction="#agregarTematica"/>
+            </HBox>
+
+            <TableView fx:id="tablaTematicas" prefHeight="300">
+                <columns>
+                    <TableColumn fx:id="colNombre" text="Nombre" prefWidth="150"/>
+                    <TableColumn fx:id="colCaracteristicas" text="Características" prefWidth="250"/>
+                    <TableColumn fx:id="colEpoca" text="Época" prefWidth="150"/>
+                </columns>
+            </TableView>
+
+            <HBox spacing="10" alignment="CENTER">
+                <Button text="Eliminar Seleccionada" onAction="#eliminarTematica"/>
+                <Button text="Volver al Menú" onAction="#volverMenu"/>
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>
+

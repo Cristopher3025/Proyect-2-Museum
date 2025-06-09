@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="app.museo.UsuariosController">
+    <children>
+        <VBox spacing="10" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+            <HBox spacing="10">
+                <Label text="Nombre:"/>
+                <TextField fx:id="txtNombre"/>
+                <Label text="Correo:"/>
+                <TextField fx:id="txtCorreo"/>
+                <Label text="Contraseña:"/>
+                <PasswordField fx:id="txtContrasena"/>
+                <Label text="Rol:"/>
+                <ComboBox fx:id="comboRol" prefWidth="150"/>
+                <Button text="Agregar" onAction="#agregarUsuario"/>
+            </HBox>
+
+            <TableView fx:id="tablaUsuarios" prefHeight="300">
+                <columns>
+                    <TableColumn fx:id="colNombre" text="Nombre" prefWidth="150"/>
+                    <TableColumn fx:id="colCorreo" text="Correo" prefWidth="200"/>
+                    <TableColumn fx:id="colRol" text="Rol" prefWidth="100"/>
+                </columns>
+            </TableView>
+
+            <HBox spacing="10" alignment="CENTER">
+                <Button text="Eliminar Seleccionado" onAction="#eliminarUsuario"/>
+                <Button text="Volver al Menú" onAction="#volverMenu"/>
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="app.museo.TransaccionesController">
+    <children>
+        <VBox spacing="10" AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+            <HBox spacing="10">
+                <Label text="Usuario:"/>
+                <ComboBox fx:id="comboUsuario" prefWidth="200"/>
+                <Label text="Monto:"/>
+                <TextField fx:id="txtMonto" prefWidth="100"/>
+                <Button text="Agregar" onAction="#agregarTransaccion"/>
+            </HBox>
+
+            <TableView fx:id="tablaTransacciones" prefHeight="300">
+                <columns>
+                    <TableColumn fx:id="colMonto" text="Monto" prefWidth="100"/>
+                    <TableColumn fx:id="colUsuario" text="Usuario" prefWidth="200"/>
+                </columns>
+            </TableView>
+
+            <HBox spacing="10" alignment="CENTER">
+                <Button text="Eliminar Seleccionada" onAction="#eliminarTransaccion"/>
+                <Button text="Volver al Menú" onAction="#volverMenu"/>
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>
+

@@ -198,7 +198,8 @@ public class Museos implements Serializable {
 
     @Override
     public String toString() {
-        return "app.museo.entities.Museos[ idmuseo=" + idmuseo + " ]";
+        return nombre;
     }
+
 }
 

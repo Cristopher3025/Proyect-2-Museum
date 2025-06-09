@@ -189,7 +189,8 @@ public class Salas implements Serializable {
 
     @Override
     public String toString() {
-        return "app.museo.entities.Salas[ idsala=" + idsala + " ]";
+        return nombre;
     }
+
     
 }

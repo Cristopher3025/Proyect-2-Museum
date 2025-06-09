@@ -99,7 +99,8 @@ public class Roles implements Serializable {
 
     @Override
     public String toString() {
-        return "app.museo.entities.Roles[ idrol=" + idrol + " ]";
+        return nombre;
     }
+
     
 }

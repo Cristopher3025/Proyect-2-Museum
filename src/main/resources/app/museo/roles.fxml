@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="app.museo.RolesController">
+    <children>
+        <VBox spacing="10" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+            <HBox spacing="10">
+                <Label text="Nombre del Rol:"/>
+                <TextField fx:id="txtNombre"/>
+                <Button text="Agregar" onAction="#agregarRol"/>
+            </HBox>
+
+            <TableView fx:id="tablaRoles" prefHeight="300">
+                <columns>
+                    <TableColumn fx:id="colNombre" text="Nombre" prefWidth="200"/>
+                </columns>
+            </TableView>
+
+            <HBox spacing="10" alignment="CENTER">
+                <Button text="Eliminar Seleccionado" onAction="#eliminarRol"/>
+                <Button text="Volver al Menú" onAction="#volverMenu"/>
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>
+

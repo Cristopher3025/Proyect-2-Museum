@@ -56,7 +56,28 @@ public class MenuController {
     private void goToValoraciones(ActionEvent event) throws Exception {
         App.setRoot("valoraciones");
     }
+    
+    @FXML
+    private void goToUsuarios(ActionEvent event) throws Exception {
+        App.setRoot("usuarios");
+    }
 
+    @FXML
+    private void goToTransacciones(ActionEvent event) throws Exception {
+        App.setRoot("transacciones");
+    }
+
+    @FXML
+    private void goToRoles(ActionEvent event) throws Exception {
+        App.setRoot("roles");
+    }
+
+    @FXML
+    private void goToValidaciones(ActionEvent event) throws Exception {
+        App.setRoot("validaciones");
+    }
+
+    
     @FXML
     private void salir() {
         System.exit(0);

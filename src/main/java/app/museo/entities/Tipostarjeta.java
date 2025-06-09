@@ -99,7 +99,8 @@ public class Tipostarjeta implements Serializable {
 
     @Override
     public String toString() {
-        return "app.museo.entities.Tipostarjeta[ idtipotarjeta=" + idtipotarjeta + " ]";
+        return nombre;
     }
+
     
 }

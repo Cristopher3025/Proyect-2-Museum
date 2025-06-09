@@ -47,6 +47,9 @@ public class Usuarios implements Serializable {
     private String nombre;
     @Column(name = "CORREO")
     private String correo;
+    @Column(name = "CONTRASENA")
+    private String contrasena;
+
     @JoinColumn(name = "ROLID", referencedColumnName = "IDROL")
     @ManyToOne
     private Roles rolid;
@@ -84,6 +87,14 @@ public class Usuarios implements Serializable {
 
     public void setCorreo(String correo) {
         this.correo = correo;
+    }
+    
+    public String getContrasena() {
+    return contrasena;
+    }
+
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
     }
 
     public Roles getRolid() {
@@ -134,7 +145,8 @@ public class Usuarios implements Serializable {
 
     @Override
     public String toString() {
-        return "app.museo.entities.Usuarios[ idusuario=" + idusuario + " ]";
+        return nombre;
     }
+
     
 }

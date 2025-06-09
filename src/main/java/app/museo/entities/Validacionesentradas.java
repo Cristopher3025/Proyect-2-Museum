@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package app.museo.entities;
 
 import jakarta.persistence.Basic;
@@ -22,10 +18,6 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
-/**
- *
- * @author crist
- */
 @Entity
 @Table(name = "VALIDACIONESENTRADAS")
 @XmlRootElement
@@ -33,24 +25,29 @@ import java.util.Date;
     @NamedQuery(name = "Validacionesentradas.findAll", query = "SELECT v FROM Validacionesentradas v"),
     @NamedQuery(name = "Validacionesentradas.findByIdvalidacion", query = "SELECT v FROM Validacionesentradas v WHERE v.idvalidacion = :idvalidacion"),
     @NamedQuery(name = "Validacionesentradas.findByFechavalidacion", query = "SELECT v FROM Validacionesentradas v WHERE v.fechavalidacion = :fechavalidacion"),
-    @NamedQuery(name = "Validacionesentradas.findByValido", query = "SELECT v FROM Validacionesentradas v WHERE v.valido = :valido")})
+    @NamedQuery(name = "Validacionesentradas.findByValido", query = "SELECT v FROM Validacionesentradas v WHERE v.valido = :valido")
+})
 public class Validacionesentradas implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "IDVALIDACION")
     private BigDecimal idvalidacion;
+
     @Column(name = "FECHAVALIDACION")
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechavalidacion;
+
     @Column(name = "VALIDO")
     private Character valido;
+
     @JoinColumn(name = "ENTRADAID", referencedColumnName = "IDENTRADA")
     @ManyToOne
     private Entradas entradaid;
+
     @JoinColumn(name = "SALAID", referencedColumnName = "IDSALA")
     @ManyToOne
     private Salas salaid;
@@ -111,20 +108,16 @@ public class Validacionesentradas implements Serializable {
 
     @Override
     public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
         if (!(object instanceof Validacionesentradas)) {
             return false;
         }
         Validacionesentradas other = (Validacionesentradas) object;
-        if ((this.idvalidacion == null && other.idvalidacion != null) || (this.idvalidacion != null && !this.idvalidacion.equals(other.idvalidacion))) {
-            return false;
-        }
-        return true;
+        return (this.idvalidacion != null || other.idvalidacion == null) && 
+               (this.idvalidacion == null || this.idvalidacion.equals(other.idvalidacion));
     }
 
     @Override
     public String toString() {
         return "app.museo.entities.Validacionesentradas[ idvalidacion=" + idvalidacion + " ]";
     }
-    
 }

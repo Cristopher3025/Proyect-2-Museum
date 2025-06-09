@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="app.museo.ValidacionesController">
+    <children>
+        <VBox spacing="15" alignment="CENTER" AnchorPane.topAnchor="20.0" 
+              AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+              
+            <Label text="Validación de Entradas por Código QR" 
+                   style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+            <HBox spacing="10" alignment="CENTER">
+                <Label text="Código QR:"/>
+                <TextField fx:id="txtCodigoQR" prefWidth="200"/>
+                <Button text="Validar" onAction="#validarQR" />
+                <Button text="Cargar QR desde imagen" onAction="#cargarDesdeImagen"/>
+            </HBox>
+
+            <Label fx:id="lblResultado" style="-fx-font-size: 16px; -fx-text-fill: #2c3e50;"/>
+
+            <Button text="Volver al Menú" onAction="#volverMenu"/>
+        </VBox>
+    </children>
+</AnchorPane>
+

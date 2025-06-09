@@ -121,7 +121,8 @@ public class Epocas implements Serializable {
 
     @Override
     public String toString() {
-        return "app.museo.entities.Epocas[ idepoca=" + idepoca + " ]";
+        return nombre;
     }
+
     
 }

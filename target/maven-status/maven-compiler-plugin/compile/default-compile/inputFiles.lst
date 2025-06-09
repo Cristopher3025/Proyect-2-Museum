@@ -1,5 +1,7 @@
 C:\Users\crist\Desktop\Museo\src\main\java\app\museo\entities\Tematicas.java
 C:\Users\crist\Desktop\Museo\src\main\java\app\museo\PreciosController.java
+C:\Users\crist\Desktop\Museo\src\main\java\app\museo\RolesController.java
+C:\Users\crist\Desktop\Museo\src\main\java\app\museo\ValoracionesController.java
 C:\Users\crist\Desktop\Museo\src\main\java\app\museo\entities\Colecciones.java
 C:\Users\crist\Desktop\Museo\src\main\java\app\museo\MenuController.java
 C:\Users\crist\Desktop\Museo\src\main\java\app\museo\entities\Promediosvaloraciones.java
@@ -9,6 +11,7 @@ C:\Users\crist\Desktop\Museo\src\main\java\app\museo\EspeciesController.java
 C:\Users\crist\Desktop\Museo\src\main\java\app\museo\entities\Transacciones.java
 C:\Users\crist\Desktop\Museo\src\main\java\app\museo\ColeccionesController.java
 C:\Users\crist\Desktop\Museo\src\main\java\app\museo\TematicasController.java
+C:\Users\crist\Desktop\Museo\src\main\java\app\museo\ValidacionesController.java
 C:\Users\crist\Desktop\Museo\src\main\java\app\museo\App.java
 C:\Users\crist\Desktop\Museo\src\main\java\app\museo\DAO\MuseoPersistence.java
 C:\Users\crist\Desktop\Museo\src\main\java\app\museo\MuseosController.java
@@ -22,6 +25,8 @@ C:\Users\crist\Desktop\Museo\src\main\java\app\museo\entities\Comisionestarjetas
 C:\Users\crist\Desktop\Museo\src\main\java\app\museo\entities\Horarios.java
 C:\Users\crist\Desktop\Museo\src\main\java\app\museo\entities\Salas.java
 C:\Users\crist\Desktop\Museo\src\main\java\app\museo\ComisionesController.java
+C:\Users\crist\Desktop\Museo\src\main\java\app\museo\TransaccionesController.java
+C:\Users\crist\Desktop\Museo\src\main\java\app\museo\UsuariosController.java
 C:\Users\crist\Desktop\Museo\src\main\java\app\museo\entities\Usuarios.java
 C:\Users\crist\Desktop\Museo\src\main\java\app\museo\entities\Museos.java
 C:\Users\crist\Desktop\Museo\src\main\java\app\museo\entities\Roles.java

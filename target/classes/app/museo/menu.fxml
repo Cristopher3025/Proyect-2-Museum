@@ -14,25 +14,58 @@
     </top>
 
     <center>
-        <VBox alignment="CENTER" spacing="25">
-            <Label text="Panel Administrativo"
-                   style="-fx-font-size: 20px; -fx-text-fill: #34495e; -fx-font-weight: bold;" />
+        <VBox alignment="CENTER" spacing="30" style="-fx-padding: 20;">
 
-            <GridPane hgap="20" vgap="15" alignment="CENTER">
-                <Button text="Museos" onAction="#goToMuseos" prefWidth="180" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
-                <Button text="Salas" onAction="#goToSalas" prefWidth="180" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
-                <Button text="Colecciones" onAction="#goToColecciones" prefWidth="180" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
-                <Button text="Especies" onAction="#goToEspecies" prefWidth="180" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
-                <Button text="Temáticas" onAction="#goToTematicas" prefWidth="180" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
-                <Button text="Precios" onAction="#goToPrecios" prefWidth="180" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
-                <Button text="Comisiones" onAction="#goToComisiones" prefWidth="180" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
-                <Button text="Entradas" onAction="#goToEntradas" prefWidth="180" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
-                <Button text="Valoraciones" onAction="#goToValoraciones" prefWidth="180" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
-                <Button text="Reportes" onAction="#goToReportes" prefWidth="180" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
-            </GridPane>
+            
+            <VBox spacing="10" alignment="CENTER">
+                <Label text="1. Configuración Inicial"
+                       style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" />
+                <GridPane hgap="20" vgap="15" alignment="CENTER">
+                    <Button text="Roles" onAction="#goToRoles" prefWidth="180" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                    <Button text="Usuarios" onAction="#goToUsuarios" prefWidth="180" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                </GridPane>
+            </VBox>
 
-            <Button text="Salir" onAction="#salir" prefWidth="180"
-                    style="-fx-background-color: #c0392b; -fx-text-fill: white; -fx-font-weight: bold;"/>
+         
+            <VBox spacing="10" alignment="CENTER">
+                <Label text="2. Mantenimientos"
+                       style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" />
+                <GridPane hgap="20" vgap="15" alignment="CENTER">
+                    <Button text="Museos" onAction="#goToMuseos" prefWidth="180" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                    <Button text="Salas" onAction="#goToSalas" prefWidth="180" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                    <Button text="Colecciones" onAction="#goToColecciones" prefWidth="180" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                    <Button text="Especies" onAction="#goToEspecies" prefWidth="180" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                    <Button text="Temáticas" onAction="#goToTematicas" prefWidth="180" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                    <Button text="Precios" onAction="#goToPrecios" prefWidth="180" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+                    <Button text="Comisiones" onAction="#goToComisiones" prefWidth="180" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                </GridPane>
+            </VBox>
+
+            
+            <VBox spacing="10" alignment="CENTER">
+                <Label text="3. Funcionalidades"
+                       style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" />
+                <GridPane hgap="20" vgap="15" alignment="CENTER">
+                    <Button text="Entradas" onAction="#goToEntradas" prefWidth="180" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                    <Button text="Validaciones" onAction="#goToValidaciones" prefWidth="180" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                    <Button text="Transacciones" onAction="#goToTransacciones" prefWidth="180" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                    <Button text="Valoraciones" onAction="#goToValoraciones" prefWidth="180" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                    
+
+                </GridPane>
+            </VBox>
+
+            
+            <VBox spacing="10" alignment="CENTER">
+                <Label text="4. Reportes y Salida"
+                       style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" />
+                <GridPane hgap="20" vgap="15" alignment="CENTER">
+                    <Button text="Reportes" onAction="#goToReportes" prefWidth="180" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                    <Button text="Salir" onAction="#salir" prefWidth="180"
+                            style="-fx-background-color: #c0392b; -fx-text-fill: white; -fx-font-weight: bold;" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                </GridPane>
+            </VBox>
+
         </VBox>
     </center>
 
