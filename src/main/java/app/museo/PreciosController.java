@@ -38,6 +38,7 @@ public class PreciosController {
 
         colSala.setCellValueFactory(cellData ->
             new javafx.beans.property.SimpleStringProperty(
+                    
                 cellData.getValue().getSalaid() != null ? cellData.getValue().getSalaid().getNombre() : "Sin sala"
             )
         );
@@ -58,6 +59,7 @@ public class PreciosController {
     private void agregarPrecio() {
         Salas sala = comboSala.getValue();
         if (sala == null || txtPrecioLS.getText().isEmpty() || txtPrecioD.getText().isEmpty()) {
+            Sonidos.reproducirSonidoError();
             mostrarAlerta("Campos incompletos", "Todos los campos son obligatorios.");
             return;
         }
@@ -82,6 +84,7 @@ public class PreciosController {
     private void eliminarPrecio() {
         Precios seleccionado = tablaPrecios.getSelectionModel().getSelectedItem();
         if (seleccionado == null) {
+            Sonidos.reproducirSonidoError();
             mostrarAlerta("Seleccione un precio", "Debe seleccionar un elemento para eliminar.");
             return;
         }

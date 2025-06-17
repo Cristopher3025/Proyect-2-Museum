@@ -171,7 +171,8 @@ public class Entradas implements Serializable {
 
     @Override
     public String toString() {
-        return "app.museo.entities.Entradas[ identrada=" + identrada + " ]";
+        return this.getUsuarioid().getNombre() + " (" + this.getFechavisita() + ")";
     }
+
     
 }

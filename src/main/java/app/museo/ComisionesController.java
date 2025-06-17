@@ -56,6 +56,7 @@ public class ComisionesController {
 
         if (comisionStr.isEmpty() || tipo == null) {
             mostrarAlerta("Campos requeridos", "Debe completar todos los campos.");
+            Sonidos.reproducirSonidoError();
             return;
         }
 
@@ -77,6 +78,7 @@ public class ComisionesController {
         Comisionestarjetas seleccionada = tablaComisiones.getSelectionModel().getSelectedItem();
         if (seleccionada == null) {
             mostrarAlerta("Seleccione una comisión", "Debe seleccionar un elemento para eliminar.");
+            Sonidos.reproducirSonidoError();
             return;
         }
 

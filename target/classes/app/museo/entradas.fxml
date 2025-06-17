@@ -7,33 +7,68 @@
 
 <BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="app.museo.EntradasController">
 
+    
     <top>
         <Label text="Registro de Entradas"
-               style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-padding: 20px;"
+               style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-padding: 20px; -fx-text-fill: #2c3e50;"
                BorderPane.alignment="CENTER"/>
     </top>
 
+    
     <center>
-        <VBox spacing="20" alignment="CENTER" style="-fx-padding: 20;">
-            <HBox spacing="10" alignment="CENTER">
-                <Label text="Fecha de Visita:" style="-fx-font-size: 14px;"/>
-                <DatePicker fx:id="dateVisita"/>
-            </HBox>
+                    <VBox spacing="20" alignment="CENTER" style="-fx-padding: 20px;">
 
-            <HBox spacing="10" alignment="CENTER">
-                <Label text="Selecciona Salas:" style="-fx-font-size: 14px;"/>
-                <ListView fx:id="listSalas" prefHeight="150" prefWidth="300"/>
-            </HBox>
+                <HBox spacing="10" alignment="CENTER">
+                    <Label text="Usuario:" style="-fx-font-size: 14px; -fx-text-fill: #34495e;"/>
+                    <ComboBox fx:id="comboUsuarios" prefWidth="200"/>
+                </HBox>
 
-            <Label fx:id="labelTotal" text="₡0.00"
-                   style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+                <HBox spacing="10" alignment="CENTER">
+                    <Label text="Fecha de Visita:" style="-fx-font-size: 14px; -fx-text-fill: #34495e;"/>
+                    <DatePicker fx:id="dateVisita"/>
+                </HBox>
 
-            <HBox spacing="20" alignment="CENTER">
-                <Button text="Calcular Total" onAction="#calcularTotal" prefWidth="150"/>
-                <Button text="Guardar Entrada" onAction="#guardarEntrada" prefWidth="150"/>
-                <Button text="Volver al Menú" onAction="#volverMenu" prefWidth="150"/>
-            </HBox>
-        </VBox>
+                <HBox spacing="10" alignment="CENTER">
+                    <Label text="Selecciona Salas:" style="-fx-font-size: 14px; -fx-text-fill: #34495e;"/>
+                    <ListView fx:id="listSalas" prefHeight="150" prefWidth="300"/>
+                </HBox>
+
+                
+                <HBox spacing="10" alignment="CENTER">
+                    <Label text="Tipo de Tarjeta:" style="-fx-font-size: 14px; -fx-text-fill: #34495e;"/>
+                    <ComboBox fx:id="comboTipoTarjeta" prefWidth="200" promptText="Seleccione una tarjeta"/>
+                </HBox>
+
+                <Label fx:id="labelTotal" text="₡0.00"
+                       style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #27ae60;"/>
+
+                <HBox spacing="20" alignment="CENTER">
+                    <Button text="Calcular Total" onAction="#calcularTotal" prefWidth="150"
+                            style="-fx-background-color: #2980b9; -fx-text-fill: white;"/>
+                    <Button text="Guardar Entrada" onAction="#guardarEntrada" prefWidth="150"
+                            style="-fx-background-color: #27ae60; -fx-text-fill: white;"/>
+                    <Button text="Volver al Menú" onAction="#volverMenu" prefWidth="150"
+                            style="-fx-background-color: #e67e22; -fx-text-fill: white;"/>
+                </HBox>
+
+                <HBox spacing="10" alignment="CENTER">
+                    <Button text="Ver Entradas Registradas" onAction="#verEntradasRegistradas"
+                            style="-fx-background-color: #27ae60; -fx-text-fill: white;"/>
+                    <Button text="Eliminar Entrada Seleccionada" onAction="#eliminarEntradaSeleccionada"
+                            style="-fx-background-color: #e74c3c; -fx-text-fill: white;"/>
+                </HBox>
+
+                <TableView fx:id="tablaEntradas" prefHeight="250" prefWidth="600">
+                    <columns>
+                        <TableColumn fx:id="colCodigoQR" text="Código QR" prefWidth="150"/>
+                        <TableColumn fx:id="colFecha" text="Fecha" prefWidth="150"/>
+                        <TableColumn fx:id="colTotal" text="Total" prefWidth="100"/>
+                    </columns>
+                </TableView>
+
+            </VBox>
+
     </center>
 
 </BorderPane>
+

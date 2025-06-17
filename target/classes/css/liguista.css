@@ -1,0 +1,84 @@
+.root {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-background-color: #0b0b0b;
+}
+
+/* === Etiquetas === */
+.label {
+    -fx-text-fill: #fafafa;
+}
+
+.label.title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: linear-gradient(to right, #e50914, #ff3c3c);
+}
+
+/* === Botones === */
+.button {
+    -fx-background-color: linear-gradient(to bottom, #e50914, #9b0b0b);
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-font-weight: bold;
+    -fx-border-color: #e50914;
+    -fx-border-radius: 8;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #ff3c3c, #c21717);
+}
+
+/* === Campos de entrada === */
+.text-field, .text-area, .combo-box, .date-picker {
+    -fx-background-color: #202020;
+    -fx-text-fill: white;
+    -fx-border-color: #e50914;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+/* ComboBox items */
+.combo-box .list-cell {
+    -fx-background-color: #1a1a1a;
+    -fx-text-fill: white;
+}
+
+/* === Tabla === */
+.table-view {
+    -fx-background-color: #121212;
+    -fx-control-inner-background: #121212;
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #e50914;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.table-view .table-cell {
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: #e50914;
+    -fx-text-fill: white;
+}
+
+/* === Scrollbars === */
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+.scroll-bar .thumb {
+    -fx-background-color: #e50914;
+    -fx-background-radius: 4;
+}
+.scroll-bar .thumb:hover {
+    -fx-background-color: #ff3c3c;
+}
+
+

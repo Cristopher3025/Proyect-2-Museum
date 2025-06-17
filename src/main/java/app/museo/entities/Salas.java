@@ -64,6 +64,8 @@ public class Salas implements Serializable {
     private Collection<Colecciones> coleccionesCollection;
     @OneToMany(mappedBy = "salaid")
     private Collection<Validacionesentradas> validacionesentradasCollection;
+    
+
 
     public Salas() {
     }
@@ -162,6 +164,7 @@ public class Salas implements Serializable {
     public Collection<Validacionesentradas> getValidacionesentradasCollection() {
         return validacionesentradasCollection;
     }
+    
 
     public void setValidacionesentradasCollection(Collection<Validacionesentradas> validacionesentradasCollection) {
         this.validacionesentradasCollection = validacionesentradasCollection;

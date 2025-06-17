@@ -74,6 +74,7 @@ public class EspeciesController {
             txtFechaExtincion.getText().isEmpty() || txtPeso.getText().isEmpty() ||
             txtTamano.getText().isEmpty() || txtCaracteristicas.getText().isEmpty() ||
             comboEpoca.getValue() == null || comboColeccion.getValue() == null) {
+            Sonidos.reproducirSonidoError();
             mostrarAlerta("Campos incompletos", "Todos los campos son obligatorios.");
             return;
         }
@@ -100,6 +101,7 @@ public class EspeciesController {
     private void eliminarEspecie() {
         Especies seleccionada = tablaEspecies.getSelectionModel().getSelectedItem();
         if (seleccionada == null) {
+            Sonidos.reproducirSonidoError();
             mostrarAlerta("Seleccione una especie", "Debe seleccionar un elemento para eliminar.");
             return;
         }

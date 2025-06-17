@@ -40,6 +40,7 @@ public class SalasController {
         colMuseo.setCellValueFactory(cellData -> {
             Museos m = cellData.getValue().getMuseoid();
             return new javafx.beans.property.SimpleStringProperty(m != null ? m.getNombre() : "Sin museo");
+            
         });
 
         cargarSalas();
@@ -58,6 +59,7 @@ public class SalasController {
         Museos museo = comboMuseos.getValue();
 
         if (nombre.isEmpty() || descripcion.isEmpty() || museo == null) {
+            Sonidos.reproducirSonidoError();
             showAlert("Campos obligatorios", "Completa todos los campos.");
             return;
         }
@@ -79,6 +81,7 @@ public class SalasController {
     private void eliminarSala() {
         Salas seleccionada = tablaSalas.getSelectionModel().getSelectedItem();
         if (seleccionada == null) {
+            Sonidos.reproducirSonidoError();
             showAlert("Selección requerida", "Selecciona una sala para eliminar.");
             return;
         }

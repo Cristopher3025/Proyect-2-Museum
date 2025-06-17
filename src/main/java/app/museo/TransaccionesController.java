@@ -54,6 +54,7 @@ public class TransaccionesController {
     @FXML
     private void agregarTransaccion() {
         if (txtMonto.getText().isEmpty() || comboUsuario.getValue() == null) {
+            Sonidos.reproducirSonidoError();
             mostrarAlerta("Campos incompletos", "Debe completar todos los campos.");
             return;
         }
@@ -77,6 +78,7 @@ public class TransaccionesController {
     private void eliminarTransaccion() {
         Transacciones seleccionada = tablaTransacciones.getSelectionModel().getSelectedItem();
         if (seleccionada == null) {
+            Sonidos.reproducirSonidoError();
             mostrarAlerta("Seleccione una transacción", "Debe seleccionar una para eliminar.");
             return;
         }

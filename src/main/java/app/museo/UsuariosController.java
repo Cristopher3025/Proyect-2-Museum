@@ -53,6 +53,7 @@ public class UsuariosController {
     private void agregarUsuario() {
         if (txtNombre.getText().isEmpty() || txtCorreo.getText().isEmpty() ||
                 txtContrasena.getText().isEmpty() || comboRol.getValue() == null) {
+            Sonidos.reproducirSonidoError();
             mostrarAlerta("Campos requeridos", "Completa todos los campos.");
             return;
         }
@@ -75,6 +76,7 @@ public class UsuariosController {
     private void eliminarUsuario() {
         Usuarios seleccionado = tablaUsuarios.getSelectionModel().getSelectedItem();
         if (seleccionado == null) {
+            Sonidos.reproducirSonidoError();
             mostrarAlerta("Selecciona un usuario", "Debes seleccionar un usuario para eliminar.");
             return;
         }

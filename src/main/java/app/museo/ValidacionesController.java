@@ -35,7 +35,8 @@ public class ValidacionesController {
     private void validarQR() {
         String codigo = txtCodigoQR.getText();
         if (codigo == null || codigo.trim().isEmpty()) {
-            mostrarAlerta("Código vacío", "Ingrese o cargue un código QR.");
+            Sonidos.reproducirSonidoError();
+            mostrarAlerta("Codigo vaci­o", "Ingrese o cargue un codigo QR.");
             return;
         }
 
@@ -46,7 +47,8 @@ public class ValidacionesController {
                 .orElse(null);
 
         if (entrada == null) {
-            mostrarAlerta("QR inválido", "No se encontró ninguna entrada con ese código.");
+            Sonidos.reproducirSonidoError();
+            mostrarAlerta("QR invalido", "No se encontro ninguna entrada con ese codigo.");
             return;
         }
 
@@ -59,7 +61,7 @@ public class ValidacionesController {
         em.persist(v);
         em.getTransaction().commit();
 
-        mostrarAlerta("Validación exitosa", "Entrada validada correctamente.");
+        mostrarAlerta("Validacion exitosa", "Entrada validada correctamente.");
         txtCodigoQR.clear();
     }
 
@@ -67,7 +69,7 @@ public class ValidacionesController {
     private void cargarDesdeImagen() {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Seleccionar imagen QR");
-        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Imágenes PNG", "*.png"));
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Imagenes PNG", "*.png"));
 
         File carpetaQR = new File("src/main/resources/qr");
         if (carpetaQR.exists()) {
@@ -89,9 +91,9 @@ public class ValidacionesController {
             validarQR();
 
         } catch (NotFoundException e) {
-            mostrarAlerta("QR no encontrado", "No se pudo leer un código QR válido en la imagen.");
+            mostrarAlerta("QR no encontrado", "No se pudo leer un codigo QR valido en la imagen.");
         } catch (Exception e) {
-            mostrarAlerta("Error", "Ocurrió un error al procesar la imagen.");
+            mostrarAlerta("Error", "Ocurrio un error al procesar la imagen.");
             e.printStackTrace();
         }
     }
@@ -110,4 +112,3 @@ public class ValidacionesController {
         alert.showAndWait();
     }
 }
-

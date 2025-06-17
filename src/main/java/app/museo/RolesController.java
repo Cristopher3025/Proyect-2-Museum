@@ -39,6 +39,7 @@ public class RolesController {
     private void agregarRol() {
         String nombre = txtNombre.getText();
         if (nombre.isEmpty()) {
+            Sonidos.reproducirSonidoError();
             mostrarAlerta("Campo requerido", "Debes ingresar un nombre de rol.");
             return;
         }
@@ -58,6 +59,7 @@ public class RolesController {
     private void eliminarRol() {
         Roles seleccionado = tablaRoles.getSelectionModel().getSelectedItem();
         if (seleccionado == null) {
+            Sonidos.reproducirSonidoError();
             mostrarAlerta("Selecciona un rol", "Debes seleccionar un rol para eliminar.");
             return;
         }

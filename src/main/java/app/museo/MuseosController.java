@@ -68,6 +68,7 @@ public class MuseosController {
 
         if (nombre.isEmpty() || direccion.isEmpty() || telefono.isEmpty() || tipo == null) {
             showAlert("Campos incompletos", "Por favor, completa todos los campos.");
+            Sonidos.reproducirSonidoError();
             return;
         }
 
@@ -90,6 +91,7 @@ public class MuseosController {
         Museos seleccionado = tablaMuseos.getSelectionModel().getSelectedItem();
         if (seleccionado == null) {
             showAlert("Selecciona un museo", "Debes seleccionar un museo para eliminarlo.");
+            Sonidos.reproducirSonidoError();
             return;
         }
 

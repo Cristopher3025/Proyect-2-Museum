@@ -2,33 +2,51 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
 
 <AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="app.museo.ValoracionesController">
     <children>
-        <VBox spacing="15" alignment="CENTER" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
-            <Label text="Valoración de Salas" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+        <VBox spacing="15" alignment="CENTER" AnchorPane.topAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+            <Label text="Valoración de Salas" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" />
 
             <HBox spacing="10" alignment="CENTER">
-                <Label text="Código QR:"/>
-                <TextField fx:id="txtCodigoQR" prefWidth="200"/>
-                <Button text="Buscar" onAction="#buscarEntradaPorQR"/>
+                <Label text="Seleccionar entrada:"/>
+                <ComboBox fx:id="comboEntradas" prefWidth="300" onAction="#cargarEntradaSeleccionada"/>
             </HBox>
 
-            <Label fx:id="lblSala"/>
-            <Label fx:id="lblMuseo"/>
-            <Label fx:id="lblTematica"/>
+            <HBox spacing="10" alignment="CENTER">
+                <Label text="Sala:"/>
+                <ComboBox fx:id="comboSalas" prefWidth="300"/>
+            </HBox>
 
-            <Label text="Calificación:"/>
-            <Slider fx:id="sliderEstrellas" prefWidth="300"/>
+            <Label fx:id="lblSala" style="-fx-font-size: 14px;"/>
+            <Label fx:id="lblMuseo" style="-fx-font-size: 14px;"/>
+          
 
-            <Label text="Observación:"/>
+            <Label text="Calificación:" style="-fx-font-size: 14px;"/>
+            <Slider fx:id="sliderEstrellas" prefWidth="300" min="1" max="5" majorTickUnit="1"
+                    minorTickCount="0" snapToTicks="true" showTickLabels="true" showTickMarks="true"/>
+
+            <Label text="Observación:" style="-fx-font-size: 14px;"/>
             <TextArea fx:id="txtObservacion" prefRowCount="3" prefWidth="300"/>
 
-            <Label fx:id="lblPromedio" style="-fx-font-size: 14px; -fx-text-fill: #2c3e50;"/>
+            <Label fx:id="lblPromedio" style="-fx-font-size: 14px; -fx-text-fill: #2980b9;" />
 
-            <Button text="Enviar Valoración" fx:id="btnEnviar" onAction="#enviarValoracion" disable="true"/>
-            <Button text="Volver al Menú" onAction="#volverMenu"/>
+            <HBox spacing="10" alignment="CENTER">
+                <Button fx:id="btnEnviar" text="Enviar" onAction="#guardarValoracion"
+                        style="-fx-background-color: #3498db; -fx-text-fill: white;"/>
+                <Button text="Volver al Menú" onAction="#volverMenu"/>
+            </HBox>
+
+            <TableView fx:id="tablaValoraciones" prefWidth="550" prefHeight="200">
+                <columns>
+                    <TableColumn fx:id="colSala" text="Sala" prefWidth="150"/>
+                    <TableColumn fx:id="colObservacion" text="Observación" prefWidth="250"/>
+                    <TableColumn fx:id="colValoracion" text="Valoración" prefWidth="100"/>
+                </columns>
+            </TableView>
         </VBox>
     </children>
 </AnchorPane>
+
 

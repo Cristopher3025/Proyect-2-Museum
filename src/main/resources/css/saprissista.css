@@ -1,0 +1,57 @@
+.root {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-background-color: #f5f1f9;
+}
+
+/* Textos */
+.label {
+    -fx-text-fill: #4a2040;
+}
+
+.label.title {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #800080;
+}
+
+/* Botones */
+.button {
+    -fx-background-color: #800080;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-font-weight: bold;
+}
+
+.button:hover {
+    -fx-background-color: #993399;
+}
+
+/* Campos */
+.text-field, .text-area, .combo-box, .date-picker {
+    -fx-background-color: #fdf7fc;
+    -fx-text-fill: #4a2040;
+    -fx-border-color: #800080;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+/* Tablas */
+.table-view {
+    -fx-background-color: white;
+    -fx-control-inner-background: white;
+    -fx-table-cell-border-color: #ddd;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #800080;
+}
+
+.table-view .table-cell {
+    -fx-text-fill: #4a2040;
+}
+
+/* Scroll */
+.scroll-bar .thumb {
+    -fx-background-color: #800080;
+}
+

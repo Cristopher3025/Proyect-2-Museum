@@ -60,6 +60,7 @@ public class TematicasController {
         Epocas epoca = comboEpoca.getValue();
 
         if (nombre.isEmpty() || caracteristicas.isEmpty() || epoca == null) {
+            Sonidos.reproducirSonidoError();
             mostrarAlerta("Campos requeridos", "Completa todos los campos.");
             return;
         }
@@ -81,6 +82,7 @@ public class TematicasController {
     private void eliminarTematica() {
         Tematicas seleccionada = tablaTematicas.getSelectionModel().getSelectedItem();
         if (seleccionada == null) {
+            Sonidos.reproducirSonidoError();
             mostrarAlerta("Seleccione una temática", "Debe seleccionar una temática para eliminar.");
             return;
         }

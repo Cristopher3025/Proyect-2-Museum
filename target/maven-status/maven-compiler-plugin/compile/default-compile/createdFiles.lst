@@ -31,5 +31,7 @@ app\museo\MuseosController.class
 app\museo\entities\Tiposmuseo.class
 app\museo\entities\Transacciones.class
 app\museo\TematicasController.class
+app\museo\Sonidos.class
 app\museo\entities\Promediosvaloraciones.class
 app\museo\UsuariosController.class
+app\museo\ReportesController.class

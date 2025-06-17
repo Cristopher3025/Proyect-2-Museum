@@ -65,6 +65,7 @@ public class ColeccionesController {
 
         if (nombre.isEmpty() || siglo.isEmpty() || observacion.isEmpty() || sala == null) {
             showAlert("Campos requeridos", "Completa todos los campos.");
+            Sonidos.reproducirSonidoError();
             return;
         }
 
@@ -87,6 +88,7 @@ public class ColeccionesController {
         Colecciones seleccionada = tablaColecciones.getSelectionModel().getSelectedItem();
         if (seleccionada == null) {
             showAlert("Selección requerida", "Selecciona una colección para eliminar.");
+            Sonidos.reproducirSonidoError();
             return;
         }
 
